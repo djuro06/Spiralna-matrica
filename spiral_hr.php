@@ -1,3 +1,22 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Marketplace
+Gist
+ @djuro06
+ Sign out
+ Watch 0
+  Star 0
+  Fork 0 djuro06/spiralna-matrica
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Settings Insights 
+Branch: master Find file Copy pathspiralna-matrica/spiral_hr.php
+64bafef  15 hours ago
+@djuro06 djuro06 Add files via upload
+1 contributor
+RawBlameHistory     
+101 lines (97 sloc)  2.45 KB
 <form method="POST">
 <span>Broj redaka:</span>
 <input type="number" name="redovi" />
@@ -15,7 +34,6 @@ if(isset($_POST["redovi"]) && isset($_POST["stupci"]))
 	if($redovi > 500 or $stupci > 500)
 	{
 		echo "Preveliki brojevi - nedovoljno memorije!";
-
 	}
 	else
 	{
@@ -35,8 +53,13 @@ if(isset($_POST["redovi"]) && isset($_POST["stupci"]))
 			}
 		}
 		for($f=0; $f>-1; $f++)
-		//while($preostaliStupciMatrice>1 && $preostaliRedoviMatrice>1)
 		{
+			if($preostaliStupciMatrice<=1 or $preostaliRedoviMatrice<=1)
+			{
+				break;
+			}
+		//while($preostaliStupciMatrice>1 && $preostaliRedoviMatrice>1)
+		
 			// popuni dole
 			for($j=$gornjagranicaj; $j>=$donjagranicaj; $j--){
 				$polje[$gornjagranicai][$j] = $ispuna;
@@ -65,9 +88,7 @@ if(isset($_POST["redovi"]) && isset($_POST["stupci"]))
 			$donjagranicaj++;
 			$preostaliRedoviMatrice-=2;
 			$preostaliStupciMatrice-=2;
-			if($preostaliStupciMatrice<=1 or $preostaliRedoviMatrice<=1){
-				break;
-			}
+			
 		}
 		// ako 1 x m - broj stupaca
 		if($preostaliRedoviMatrice==1){
@@ -99,3 +120,5 @@ if(isset($_POST["redovi"]) && isset($_POST["stupci"]))
 	}
 }
 ?>
+Contact GitHub API Training Shop Blog About
+© 2017 GitHub, Inc. Terms Privacy Security Status Help
