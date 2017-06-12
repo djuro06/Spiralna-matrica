@@ -28,6 +28,10 @@ if(isset($_POST["rows"]) && isset($_POST["columns"]))
 		}
 	}
 	for($f=0; $f>-1; $f++)
+		if($remainingMatrixCols<=1 or $remainingMatrixRows<=1)
+		{
+			break;
+		}
 	//while($remainingMatrixCols>1 && $remainingMatrixRows>1)
 	{
 		// popuni dole
@@ -58,10 +62,7 @@ if(isset($_POST["rows"]) && isset($_POST["columns"]))
 		$lowerBoundj++;
 		$remainingMatrixRows-=2;
 		$remainingMatrixCols-=2;
-
-		if($remainingMatrixCols<=1 or $remainingMatrixRows<=1){
-			break;
-		}
+		
 	}
 	// ako 1 x m 
 	if($remainingMatrixRows==1){
@@ -92,4 +93,3 @@ if(isset($_POST["rows"]) && isset($_POST["columns"]))
 	echo "</table>";
 }
 ?>
-
