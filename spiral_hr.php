@@ -1,22 +1,3 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Marketplace
-Gist
- @djuro06
- Sign out
- Watch 0
-  Star 0
-  Fork 0 djuro06/spiralna-matrica
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Settings Insights 
-Branch: master Find file Copy pathspiralna-matrica/spiral_hr.php
-64bafef  15 hours ago
-@djuro06 djuro06 Add files via upload
-1 contributor
-RawBlameHistory     
-101 lines (97 sloc)  2.45 KB
 <form method="POST">
 <span>Broj redaka:</span>
 <input type="number" name="redovi" />
